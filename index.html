@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Employee Details</title>
+        <link rel = "stylesheet"
+        href = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+     <script src = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+     
+        <script type="text/javascript" src="employeeController.js"></script>
+    </head>
+    <body ng-app="employeeApp">
+        <div ng-controller="employeeCtrl">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Fullname</th>
+                    <th>Twubric</th>
+                    <th>Joining date</th>
+                </tr>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.uid}}</td>
+                    <td>{{employee.username}}</td>
+                    <td>{{employee.image}}</td>
+                    <td>{{employee.fullname}}</td>
+                    <td>{{employee.twubric}}</td>
+                    <td><a href="#" ng-click="datePicker()">{{employee.join_date}}</a></td>
+                    <td><md-datepicker ng-model="datePicker"></md-datepicker></td>
+                
+                    
+                </tr>
+            </table>
+        
+
+           
+        </div>
+    </body>
+</html>
